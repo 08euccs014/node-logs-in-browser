@@ -23,10 +23,6 @@
       res.write(data);
     });
 
-    tail.stdout.on("data", function (data) {
-      res.write(data);
-    });
-
     tail.on('close', function(code) {
       console.log(code);
       res.end(code);
